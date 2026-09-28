@@ -1,0 +1,25 @@
+{
+  "name": "kalima-tools",
+  "version": "1.0.0",
+  "description": "Kalima Tools - Arabic text & number tools for a global audience (Freemium + AdSense + Paddle)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:ssr": "vite build --ssr src/ssr-entry.jsx --outDir dist-ssr",
+    "prerender": "node scripts/prerender.mjs",
+    "preview": "vite preview --port 4173 --host 127.0.0.1",
+    "test": "node --test \"test/*.test.js\"",
+    "check": "npm run test && npm run build && npm run prerender"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.1"
+  }
+}
