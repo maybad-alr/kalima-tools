@@ -48,6 +48,7 @@ if (repoArg) {
   run('git add -A', tmp);
   run(`git commit -m "deploy: ${new Date().toISOString()}"`, tmp);
   run('git push -u origin gh-pages', tmp);
+  rmSync(tmp, { recursive: true, force: true }); // disposable staging — don't leave built assets in the worktree
   console.log(`\nDeployed to GitHub Pages (gh-pages of ${repoArg}).`);
 } else {
   console.log('\nBuilt & prerendered into publish-tmp/. Add --repo=owner/name to push to GitHub Pages.');
